@@ -13,6 +13,7 @@ body {
 /** Globales **/
 .contenedor {
     max-width: 1200px;
+    width: 95%;
     margin: 0 auto;
 }
 h1, h2, h3, h4 {
@@ -23,6 +24,7 @@ h1 {
 }
 h2 {
     font-size: 4rem;
+    line-height: 4rem;
 }
 h3 {
     font-size: 3.2rem;
@@ -39,6 +41,32 @@ img {
 }
 .no-margin {
     margin: 0;
+}
+
+/** Botones **/
+.btn {
+    display: block;
+    text-align: center;
+    padding: 1rem 3rem;
+    margin: 2rem 0;
+    color: white;
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+@media (min-width: 768px) {
+    .btn {
+        display: inline-block;
+    }
+}
+
+.btn-primario {
+    background-color: black;
+}
+.btn-secundario {
+    background-color: #784d3c;
 }
 /** Header **/
 @media (min-width:768px) {
@@ -66,6 +94,7 @@ img {
 .site-header h1 span {
     font-weight: 700;
 }
+
 /** Navegacion **/
 .navegacion a {
     text-align: center;
@@ -94,4 +123,59 @@ img {
 }
 .texto-header p {
     font-size: 2.2rem;
+}
+
+/** Contenido principal HOME **/
+.contenido-principal {
+    display: flex;
+    flex-wrap: wrap;
+}
+.blog,
+.cursos {
+    flex: 0 0 100%;
+}
+.cursos {
+    order: -1;
+}
+
+@media (min-width: 768px) {
+    .contenido-principal {
+        justify-content: space-between;
+    }
+    .blog {
+        flex-basis: calc(66.6%);
+    }
+    .cursos {
+        flex-basis: calc(33.3% - 4rem);
+        order: 2;
+    }
+}
+
+/** Opcional **/
+.entrada-blog {
+    margin-bottom: 2rem;
+    border-bottom: 1px  solid #e1e1e1;
+}
+.entrada-blog:last-of-type {
+    border: none;
+}
+/** Cursos siebar **/
+.cursos-lista {
+    padding: 0%;
+    list-style: none;
+}
+.curso {
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #e1e1e1;
+}
+.curso:last-of-type {
+    border-bottom: none;
+}
+.curso p {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.curso p span {
+    font-weight: 400;
 }
